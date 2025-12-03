@@ -5,6 +5,10 @@ import FeatureCard from './components/FeatureCard';
 import Button from './components/shared/Button';
 import Modal from './components/shared/Modal';
 import ContactForm from './components/contact/ContactForm';
+import PortfolioSection from './components/shared/PortfolioSection';
+import TestimonialsSection from './components/shared/TestimonialsSection';
+import StatsSection from './components/shared/StatsSection';
+import CTASection from './components/shared/CTASection';
 import { useModal } from './lib/context/ModalContext';
 
 export default function Home() {
@@ -134,17 +138,20 @@ export default function Home() {
             </Button>
           </motion.div>
 
-          {/* Footer */}
-          <motion.footer
-            className="mt-24 text-sm text-zinc-600"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 2.3 }}
-          >
-            <p>&copy; {new Date().getFullYear()} King Legend, Inc. All rights reserved.</p>
-          </motion.footer>
         </main>
       </motion.div>
+
+      {/* Stats Section */}
+      <StatsSection />
+
+      {/* Portfolio Section */}
+      <PortfolioSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
+      {/* Final CTA Section */}
+      <CTASection />
 
       {/* Contact Modal */}
       <Modal isOpen={isContactModalOpen} onClose={closeContactModal} title="Get Started">

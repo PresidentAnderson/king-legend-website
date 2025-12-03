@@ -1,11 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { ReactNode } from 'react';
 
 interface ButtonProps {
   children: ReactNode;
   onClick?: () => void;
+  href?: string;
   variant?: 'primary' | 'secondary' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
@@ -15,12 +17,13 @@ interface ButtonProps {
 export default function Button({
   children,
   onClick,
+  href,
   variant = 'primary',
   size = 'md',
   className = '',
   type = 'button',
 }: ButtonProps) {
-  const baseStyles = 'rounded-full font-semibold transition-all';
+  const baseStyles = 'inline-block rounded-full font-semibold transition-all text-center';
 
   const variantStyles = {
     primary: 'bg-white text-black hover:bg-zinc-200',
@@ -34,11 +37,28 @@ export default function Button({
     lg: 'px-10 py-4 text-lg',
   };
 
+  const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+
+  if (href) {
+    return (
+      <Link href={href}>
+        <motion.span
+          className={combinedClassName}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.2 }}
+        >
+          {children}
+        </motion.span>
+      </Link>
+    );
+  }
+
   return (
     <motion.button
       type={type}
       onClick={onClick}
-      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
+      className={combinedClassName}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.2 }}
