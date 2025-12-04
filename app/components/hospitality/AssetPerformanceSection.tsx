@@ -46,23 +46,27 @@ export default function AssetPerformanceSection() {
   const assetTypes = [
     {
       name: 'PVT Hostel (Flagship)',
-      description: 'Full-service community-driven hostels with complete KLX-Ops deployment',
-      features: ['150+ beds', 'Full tech stack', 'Academy integration', 'Ambassador program'],
+      description: '150+ beds | Full tech stack | Community-driven',
+      subtitle: 'Complete KLX-Ops deployment for large-scale, experience-driven hostels.',
+      features: ['Full Aurora PMS', 'Academy integration', 'Ambassador program', 'Complete WisdomOS'],
     },
     {
       name: 'PVT Micro',
-      description: 'Compact urban footprints with essential PVT experience modules',
-      features: ['30-80 beds', 'Core PMS', 'Essential SOPs', 'Digital-first'],
+      description: '30–80 beds | Essential modules | Digital-first',
+      subtitle: 'Optimized for compact urban footprints.',
+      features: ['Core PMS', 'Essential SOPs', 'Automated check-in', 'Performance dashboards'],
     },
     {
       name: 'PVT Hybrid',
-      description: 'Mixed-use properties combining hospitality with co-living or coworking',
-      features: ['Flexible inventory', 'Extended stays', 'Community spaces', 'Partnership revenue'],
+      description: 'Hospitality + Co-living + Workspace',
+      subtitle: 'Flexible inventory with mixed revenue models.',
+      features: ['Multi-use spaces', 'Extended stays', 'Membership tiers', 'Partnership revenue'],
     },
     {
       name: 'PVT Extended Stay',
-      description: 'Long-term resident-focused properties with membership models',
-      features: ['30+ day stays', 'Member benefits', 'Workspace access', 'Local integration'],
+      description: '30+ day stays | Membership model',
+      subtitle: 'Operational efficiency meets long-term community.',
+      features: ['Monthly residents', 'Member benefits', 'Workspace access', 'Local partnerships'],
     },
   ];
 
@@ -89,10 +93,15 @@ export default function AssetPerformanceSection() {
           <h2 className="mb-4 text-4xl font-bold text-white sm:text-5xl">
             Asset Management & Performance
           </h2>
-          <p className="mx-auto max-w-3xl text-lg text-zinc-400">
-            Turning design, technology, and brand philosophies into financially and operationally
-            performant reality across the PVT ecosystem.
+          <p className="mx-auto mb-6 max-w-3xl text-xl text-zinc-300">
+            Turning design and technology into operational and financial outcomes.
           </p>
+          <div className="mx-auto max-w-4xl rounded-2xl border border-zinc-700 bg-zinc-900/50 p-6">
+            <p className="text-lg text-zinc-400">
+              We transform hospitality assets into intelligent, financially optimized operations where every metric improves, every month.
+              <span className="font-semibold text-white"> Assets that outperform the market — consistently.</span>
+            </p>
+          </div>
         </motion.div>
 
         {/* Performance Metrics Grid */}
@@ -144,11 +153,12 @@ export default function AssetPerformanceSection() {
           <div className="grid gap-6 md:grid-cols-2">
             {assetTypes.map((asset, index) => (
               <Card key={index} className="group hover:border-zinc-700">
-                <div className="mb-3 flex items-center justify-between">
+                <div className="mb-2 flex items-center justify-between">
                   <h4 className="text-xl font-bold text-white">{asset.name}</h4>
                   <div className="h-2 w-2 rounded-full bg-green-500"></div>
                 </div>
-                <p className="mb-4 text-sm text-zinc-400">{asset.description}</p>
+                <p className="mb-2 text-sm font-semibold text-zinc-300">{asset.description}</p>
+                <p className="mb-4 text-sm text-zinc-500">{asset.subtitle}</p>
                 <div className="flex flex-wrap gap-2">
                   {asset.features.map((feature, idx) => (
                     <span
@@ -174,8 +184,8 @@ export default function AssetPerformanceSection() {
           <Card className="border-2 border-zinc-700">
             <div className="mb-6 text-center">
               <h3 className="mb-2 text-2xl font-bold text-white">Management Agreement Framework</h3>
-              <p className="text-sm text-zinc-400">
-                Structured partnership model for asset owners and investors
+              <p className="text-base text-zinc-300">
+                A predictable, partnership-driven model for asset owners.
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
@@ -198,11 +208,9 @@ export default function AssetPerformanceSection() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 rounded-lg bg-gradient-to-r from-zinc-800/50 to-zinc-900/50 p-4 text-center">
-              <p className="text-sm text-zinc-300">
-                <span className="font-semibold text-white">Operator + System Integrator:</span> Every
-                agreement structures King Legend as both operational excellence partner and technology
-                backbone provider
+            <div className="mt-6 rounded-lg border border-zinc-700 bg-gradient-to-r from-zinc-800/50 to-zinc-900/50 p-4 text-center">
+              <p className="text-base font-semibold text-white">
+                You get an operator + a systems integrator in one.
               </p>
             </div>
           </Card>

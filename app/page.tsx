@@ -59,16 +59,16 @@ export default function Home() {
         <main className="flex flex-col items-center justify-center px-6 py-24 text-center">
           {/* Hero Section */}
           <motion.div
-            className="mb-12 flex flex-col items-center gap-6"
+            className="mb-16 flex flex-col items-center gap-8"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
             <motion.h1
-              className="bg-gradient-to-r from-zinc-200 via-white to-zinc-200 bg-clip-text text-6xl font-bold tracking-tight text-transparent sm:text-7xl md:text-8xl"
+              className="bg-gradient-to-r from-zinc-200 via-white to-zinc-200 bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-6xl md:text-7xl"
               variants={itemVariants}
             >
-              King Legend
+              Hospitality Management Excellence
             </motion.h1>
 
             <motion.div
@@ -77,75 +77,56 @@ export default function Home() {
             />
 
             <motion.p
-              className="max-w-2xl text-xl leading-relaxed text-zinc-400 sm:text-2xl"
+              className="max-w-4xl text-center text-xl leading-relaxed text-zinc-300 sm:text-2xl"
               variants={itemVariants}
             >
-              Hospitality Management Excellence
-            </motion.p>
-
-            <motion.p
-              className="max-w-3xl text-base leading-relaxed text-zinc-500 sm:text-lg"
-              variants={itemVariants}
-            >
-              The operational engine of the PVT ecosystem — delivering disciplined hospitality management,
-              data-driven performance, and brand-aligned guest experience across every asset under our care.
+              Where disciplined operations, intelligent systems, and cultural architecture converge to deliver PVT-level performance across every asset we manage.
             </motion.p>
           </motion.div>
 
-          {/* Tagline */}
+          {/* Executive Positioning */}
           <motion.div
-            className="mb-16 max-w-3xl"
+            className="mb-20 max-w-4xl"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <p className="text-lg leading-8 text-zinc-500">
-              "PVT Hostel builds the frontier. King Legend operationalizes it at scale."
+            <h2 className="mb-6 text-center text-3xl font-bold text-white sm:text-4xl">
+              The Operational Engine of the PVT Ecosystem
+            </h2>
+            <div className="mb-6 text-center">
+              <p className="text-xl text-zinc-400">PVT builds the frontier.</p>
+              <p className="text-2xl font-semibold text-white">King Legend operationalizes it at scale.</p>
+            </div>
+            <p className="text-center text-lg leading-8 text-zinc-400">
+              We transform hospitality assets into intelligent, financially optimized, brand-aligned operations powered by the KLX-Ops Framework and integrated with Aurora PMS and WisdomOS culture architecture.
             </p>
+            <div className="mt-8 rounded-2xl border border-zinc-700 bg-zinc-900/50 p-6 text-center">
+              <p className="text-lg text-zinc-300">
+                <span className="font-bold text-white">Our mandate is simple:</span>
+                <br />
+                Precision in execution. Predictability in performance. Integrity in experience.
+              </p>
+            </div>
           </motion.div>
 
-          {/* Feature Grid */}
+          {/* Philosophy Statement */}
           <motion.div
-            id="features-section"
-            className="grid w-full max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-3"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={{
-              visible: {
-                transition: {
-                  staggerChildren: 0.15,
-                },
-              },
-            }}
-          >
-            <FeatureCard
-              title="KLX-Ops Framework"
-              description="Proprietary operating system: Design → Deploy → Operate → Optimize lifecycle with WisdomOS integration."
-            />
-            <FeatureCard
-              title="Performance Excellence"
-              description="RevPAR optimization, 12-month asset dashboards, and data-driven hospitality at scale."
-            />
-            <FeatureCard
-              title="Brand Governance"
-              description="Guardian of PVT experience across all assets with predictable, trust-ready quality."
-            />
-          </motion.div>
-
-          {/* CTA Section */}
-          <motion.div
-            className="mt-16 flex flex-col gap-4 sm:flex-row"
+            id="philosophy-section"
+            className="mb-16 w-full max-w-4xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.8 }}
+            transition={{ duration: 0.6, delay: 1.6 }}
           >
-            <Button onClick={openContactModal} variant="primary">
-              Get Started
-            </Button>
-            <Button onClick={handleLearnMore} variant="secondary">
-              Learn More
-            </Button>
+            <div className="rounded-2xl border border-zinc-700 bg-gradient-to-br from-zinc-900 to-black p-8 text-center">
+              <p className="text-2xl font-semibold italic text-zinc-300">
+                "Hospitality has historically been intuition-driven.
+                <br />
+                <span className="text-white">We rebuilt it as a systems-first operating discipline</span>
+                <br />
+                that feels like premium service."
+              </p>
+            </div>
           </motion.div>
 
         </main>
