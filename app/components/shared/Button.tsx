@@ -12,6 +12,7 @@ interface ButtonProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
 }
 
 export default function Button({
@@ -22,6 +23,7 @@ export default function Button({
   size = 'md',
   className = '',
   type = 'button',
+  disabled = false,
 }: ButtonProps) {
   const baseStyles = 'inline-block rounded-full font-semibold transition-all text-center';
 
@@ -58,9 +60,10 @@ export default function Button({
     <motion.button
       type={type}
       onClick={onClick}
-      className={combinedClassName}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      disabled={disabled}
+      className={`${combinedClassName} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+      whileHover={disabled ? {} : { scale: 1.05 }}
+      whileTap={disabled ? {} : { scale: 0.95 }}
       transition={{ duration: 0.2 }}
     >
       {children}
