@@ -14,13 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "King Legend, Inc | Premium Brand & Entertainment",
-  description: "King Legend, Inc - Your destination for premium brand experiences and entertainment excellence.",
-  keywords: ["King Legend", "brand", "entertainment", "premium"],
+  title: "King Legend, Inc | Hospitality Management Excellence",
+  description: "The operational engine of the PVT ecosystem — delivering disciplined hospitality management, data-driven performance, and brand-aligned guest experience across every asset under our care.",
+  keywords: ["King Legend", "hospitality management", "PVT Hostel", "KLX-Ops", "asset management", "RevPAR optimization", "hotel operations"],
   authors: [{ name: "King Legend, Inc" }],
   openGraph: {
-    title: "King Legend, Inc",
-    description: "Premium brand experiences and entertainment excellence.",
+    title: "King Legend, Inc | Hospitality Management Excellence",
+    description: "PVT Hostel builds the frontier. King Legend operationalizes it at scale.",
     type: "website",
   },
 };

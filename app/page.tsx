@@ -9,6 +9,9 @@ import PortfolioSection from './components/shared/PortfolioSection';
 import TestimonialsSection from './components/shared/TestimonialsSection';
 import StatsSection from './components/shared/StatsSection';
 import CTASection from './components/shared/CTASection';
+import KLXOpsSection from './components/hospitality/KLXOpsSection';
+import AssetPerformanceSection from './components/hospitality/AssetPerformanceSection';
+import WorkforceSection from './components/hospitality/WorkforceSection';
 import { useModal } from './lib/context/ModalContext';
 
 export default function Home() {
@@ -77,7 +80,15 @@ export default function Home() {
               className="max-w-2xl text-xl leading-relaxed text-zinc-400 sm:text-2xl"
               variants={itemVariants}
             >
-              Premium Brand & Entertainment Excellence
+              Hospitality Management Excellence
+            </motion.p>
+
+            <motion.p
+              className="max-w-3xl text-base leading-relaxed text-zinc-500 sm:text-lg"
+              variants={itemVariants}
+            >
+              The operational engine of the PVT ecosystem — delivering disciplined hospitality management,
+              data-driven performance, and brand-aligned guest experience across every asset under our care.
             </motion.p>
           </motion.div>
 
@@ -89,8 +100,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 1.2 }}
           >
             <p className="text-lg leading-8 text-zinc-500">
-              Building extraordinary experiences at the intersection of innovation, creativity, and
-              excellence.
+              "PVT Hostel builds the frontier. King Legend operationalizes it at scale."
             </p>
           </motion.div>
 
@@ -110,16 +120,16 @@ export default function Home() {
             }}
           >
             <FeatureCard
-              title="Innovation"
-              description="Pioneering new frontiers in brand development and entertainment."
+              title="KLX-Ops Framework"
+              description="Proprietary operating system: Design → Deploy → Operate → Optimize lifecycle with WisdomOS integration."
             />
             <FeatureCard
-              title="Excellence"
-              description="Delivering premium quality in every project and partnership."
+              title="Performance Excellence"
+              description="RevPAR optimization, 12-month asset dashboards, and data-driven hospitality at scale."
             />
             <FeatureCard
-              title="Vision"
-              description="Creating lasting impact through strategic brand building."
+              title="Brand Governance"
+              description="Guardian of PVT experience across all assets with predictable, trust-ready quality."
             />
           </motion.div>
 
@@ -141,8 +151,17 @@ export default function Home() {
         </main>
       </motion.div>
 
+      {/* KLX-Ops Framework Section */}
+      <KLXOpsSection />
+
+      {/* Asset Management & Performance */}
+      <AssetPerformanceSection />
+
       {/* Stats Section */}
       <StatsSection />
+
+      {/* Workforce & Culture System */}
+      <WorkforceSection />
 
       {/* Portfolio Section */}
       <PortfolioSection />
