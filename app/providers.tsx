@@ -2,7 +2,12 @@
 
 import { ReactNode } from 'react';
 import { ModalProvider } from './lib/context/ModalContext';
+import { AuthProvider } from './lib/context/AuthContext';
 
 export function Providers({ children }: { children: ReactNode }) {
-  return <ModalProvider>{children}</ModalProvider>;
+  return (
+    <AuthProvider>
+      <ModalProvider>{children}</ModalProvider>
+    </AuthProvider>
+  );
 }

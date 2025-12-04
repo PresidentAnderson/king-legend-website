@@ -4,9 +4,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Navigation from './Navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useAuth } from '@/app/lib/context/AuthContext';
+import Button from './Button';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isAuthenticated, user } = useAuth();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -36,8 +39,17 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden items-center gap-6 md:flex">
             <Navigation />
+            {isAuthenticated ? (
+              <Button href="/dashboard" variant="primary" size="sm">
+                Dashboard
+              </Button>
+            ) : (
+              <Button href="/login" variant="primary" size="sm">
+                Login
+              </Button>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
