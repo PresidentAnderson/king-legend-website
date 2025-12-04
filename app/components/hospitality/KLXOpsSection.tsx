@@ -8,7 +8,7 @@ export default function KLXOpsSection() {
     {
       phase: '01',
       title: 'Design',
-      description: 'Strategic planning grounded in data, market intelligence, and PVT's experience architecture.',
+      description: 'Strategic planning grounded in data, market intelligence, and PVT\'s experience architecture.',
       features: ['Market Scouting & Feasibility', 'PVT Brand & Experience Modules', 'Operating Model Design', 'Asset Positioning Strategy'],
       outcome: 'A blueprint that sets the asset up for predictable success.',
       icon: (
